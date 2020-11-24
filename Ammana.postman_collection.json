@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "58b7e216-ed8f-4c5b-b4b9-e9434292f55b",
+		"name": "Ammana",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Auth",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "02c421a9-8cbe-4e8d-bfa7-aa2a3fa5dbcb",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody)",
+							"postman.setEnvironmentVariable(\"access-token\", jsonData.data.access_token)",
+							"postman.setEnvironmentVariable(\"token_type\", jsonData.data.token_type)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client_secret",
+						"value": "{{client_secret}}",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "yes",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "yes",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"client_secret\":\"{{client_secret}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ammana-url}}/clients/{{client_id}}/auth"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Data Card",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2b218160-4e6c-4738-95ee-5a34a979e7b5",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody)",
+							"postman.setEnvironmentVariable(\"card_id\", jsonData.data.id)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token_type}} {{access-token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{ammana-url}}/clients/{{client_id}}/card?phone_number={{phone_number}}",
+					"host": [
+						"{{ammana-url}}"
+					],
+					"path": [
+						"clients",
+						"{{client_id}}",
+						"card"
+					],
+					"query": [
+						{
+							"key": "phone_number",
+							"value": "{{phone_number}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get URL Order ",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token_type}} {{access-token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "yes",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"response_type\": \"microsite\",\n    \"invoice_code\": \"00123455678\",\n    \"callback_url\": \"http://bhinneka.com/paymentv2/api/notification/ammana-finish\",\n    \"cancel_url\": \"http://bhinneka.com/paymentv2/api/notification/ammana-finish\",\n    \"items\": [{\n        \"id\" : \"SKU00001\",\n        \"name\" : \"SAMSUNG A51 6/64\",\n        \"qty\" : 1,\n        \"price\": 100000,\n        \"total\": 100000\n    }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ammana-url}}/clients/{{client_id}}/cards/{{card_id}}/orders"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Payment Detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "yes",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token_type}} {{access-token}}",
+						"type": "text"
+					}
+				],
+				"url": "{{ammana-url}}/clients/{{client_id}}/orders/INVOICE-CODE"
+			},
+			"response": []
+		},
+		{
+			"name": "Set Settle Payment",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "yes"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{token_type}} {{access-token}}"
+					}
+				],
+				"url": "{{ammana-url}}/clients/{{client_id}}/orders/INVOICE-CODE/settle"
+			},
+			"response": []
+		},
+		{
+			"name": "Set Void Payment",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "yes",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token_type}} {{access-token}}",
+						"type": "text"
+					}
+				],
+				"url": "{{ammana-url}}/clients/{{client_id}}/orders/INVOICE-CODE"
+			},
+			"response": []
+		},
+		{
+			"name": "Notif From Ammana",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": ""
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
