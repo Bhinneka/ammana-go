@@ -5,7 +5,7 @@ type GenerateAccessTokenRequest struct {
 }
 
 type OrderRequest struct {
-	CardID       string      `json:"-"`
+	CardID       string      `json:"card_id"`
 	ResponseType string      `json:"response_type"`
 	InvoiceCode  string      `json:"invoice_code"`
 	CallbackUrl  string      `json:"callback_url"`

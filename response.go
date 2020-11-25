@@ -19,7 +19,7 @@ type GenerateAccessTokenResponse struct {
 type OrderResponse struct {
 	Data struct {
 		Url       string `json:"url"`
-		ExpiresIn string `json:"expires_in"`
+		ExpiresIn int `json:"expires_in"`
 	} `json:"data"`
 	Meta    SharedMeta `json:"meta"`
 	Message string     `json:"message"`
