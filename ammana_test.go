@@ -177,7 +177,7 @@ func TestAmmanaGetOrderURL(t *testing.T) {
 
             w.Header().Set("Content-Type", "application-json; charset=utf-8")
             w.WriteHeader(http.StatusOK)
-            w.Write([]byte(`{"message":"error""`))
+            w.Write([]byte(`{"message":"invalid parameter on order request"}`))
 
         }))
         //close server
