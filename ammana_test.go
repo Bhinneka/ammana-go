@@ -43,7 +43,7 @@ func TestAmmanaGetAuth(t *testing.T) {
 								"data": {
 									"token_type": "Bearer",
 									"expires_in": 3600,
-									"access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJkYTg5OTAxZi00YjJlLTQzOGItYjcwNy1mOTM2NDViMzk2MzEiLCJtZXJjaGFudCI6ImIzYWJkNWI1LWUwMTMtNGNkYS1hNmE4LWQwODU3MGY1NTdmZSIsImV4cCI6MTYwNjEyMzI2MX0.Y4TxmRj0S0hXvEaXS_njqLdPh4XCRbVMOcrM3PnDqEcSlBckHcbhOJZ_9t2NXWNSo4l2VFkbwVoI1SQqCwOqTR8kgrVEmieIEuXcVCjWWAvkU1_-xIJTtv4gbpdxzdekWwJx4X4FaGjrtFJ7iE8gRy18b3BOceXmu-h2QtUgyk_DDNKr4QAqImw4C2b5NB2VwHEzV2DNTCDJpnIrewEYu_WpvyzoG9JQEXLMJgmLlV0jg4MKWs7RClQiHCBG3Jl91k3t0RuCG79okVX4rYuGrhVe5DhGQrMFL91Ud-SqrbBThRRfVDCuYUzwhCf4SFsgzP1f3gTFujYHwoa-UY7yrPVJPapC6VoW1BBft46lMP7nHc8FgTQCrOcldUQRhV9DKpd_BPIddOcGCgrCjmwGgJ63QkWgLArVmDCPUzEaps_r294Por6OpiV4o8eWaBq7aurLwj9E-6TlsOXRaFrRlr4K3iL3GGtoO79KjVttPX54HgPb-xhkjHIA22pfIlztOJAuai2yV3Ws8aDhZMYhhP_T8kYg48bFv2BMYu43mfFuOGlDSY4ZyxuLHXfdT_X2hnJIvuo7DZA9EkqzEt35qOqEk-2CZ4Q0HiwsIWYOIaRFEUz0B4EdfGQmhZxOka0559hHj5c99akP2pDkrK9ZLv5gyzOdrQ28KfDZBEdVWtA"
+									"access_token":""
 								},
 								"meta": {
 									"hostname": "paylater-dev",
@@ -78,7 +78,7 @@ func TestAmmanaGetCardDetail(t *testing.T) {
 							"data": {
 								"token_type": "Bearer",
 								"expires_in": 3600,
-								"access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJkYTg5OTAxZi00YjJlLTQzOGItYjcwNy1mOTM2NDViMzk2MzEiLCJtZXJjaGFudCI6ImIzYWJkNWI1LWUwMTMtNGNkYS1hNmE4LWQwODU3MGY1NTdmZSIsImV4cCI6MTYwNjEyMzI2MX0.Y4TxmRj0S0hXvEaXS_njqLdPh4XCRbVMOcrM3PnDqEcSlBckHcbhOJZ_9t2NXWNSo4l2VFkbwVoI1SQqCwOqTR8kgrVEmieIEuXcVCjWWAvkU1_-xIJTtv4gbpdxzdekWwJx4X4FaGjrtFJ7iE8gRy18b3BOceXmu-h2QtUgyk_DDNKr4QAqImw4C2b5NB2VwHEzV2DNTCDJpnIrewEYu_WpvyzoG9JQEXLMJgmLlV0jg4MKWs7RClQiHCBG3Jl91k3t0RuCG79okVX4rYuGrhVe5DhGQrMFL91Ud-SqrbBThRRfVDCuYUzwhCf4SFsgzP1f3gTFujYHwoa-UY7yrPVJPapC6VoW1BBft46lMP7nHc8FgTQCrOcldUQRhV9DKpd_BPIddOcGCgrCjmwGgJ63QkWgLArVmDCPUzEaps_r294Por6OpiV4o8eWaBq7aurLwj9E-6TlsOXRaFrRlr4K3iL3GGtoO79KjVttPX54HgPb-xhkjHIA22pfIlztOJAuai2yV3Ws8aDhZMYhhP_T8kYg48bFv2BMYu43mfFuOGlDSY4ZyxuLHXfdT_X2hnJIvuo7DZA9EkqzEt35qOqEk-2CZ4Q0HiwsIWYOIaRFEUz0B4EdfGQmhZxOka0559hHj5c99akP2pDkrK9ZLv5gyzOdrQ28KfDZBEdVWtA"
+								"access_token":""
 							},
 							"meta": {
 								"hostname": "paylater-dev",
@@ -127,7 +127,7 @@ func TestAmmanaGetCardDetail(t *testing.T) {
 							"data": {
 								"token_type": "Bearer",
 								"expires_in": 3600,
-								"access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJkYTg5OTAxZi00YjJlLTQzOGItYjcwNy1mOTM2NDViMzk2MzEiLCJtZXJjaGFudCI6ImIzYWJkNWI1LWUwMTMtNGNkYS1hNmE4LWQwODU3MGY1NTdmZSIsImV4cCI6MTYwNjEyMzI2MX0.Y4TxmRj0S0hXvEaXS_njqLdPh4XCRbVMOcrM3PnDqEcSlBckHcbhOJZ_9t2NXWNSo4l2VFkbwVoI1SQqCwOqTR8kgrVEmieIEuXcVCjWWAvkU1_-xIJTtv4gbpdxzdekWwJx4X4FaGjrtFJ7iE8gRy18b3BOceXmu-h2QtUgyk_DDNKr4QAqImw4C2b5NB2VwHEzV2DNTCDJpnIrewEYu_WpvyzoG9JQEXLMJgmLlV0jg4MKWs7RClQiHCBG3Jl91k3t0RuCG79okVX4rYuGrhVe5DhGQrMFL91Ud-SqrbBThRRfVDCuYUzwhCf4SFsgzP1f3gTFujYHwoa-UY7yrPVJPapC6VoW1BBft46lMP7nHc8FgTQCrOcldUQRhV9DKpd_BPIddOcGCgrCjmwGgJ63QkWgLArVmDCPUzEaps_r294Por6OpiV4o8eWaBq7aurLwj9E-6TlsOXRaFrRlr4K3iL3GGtoO79KjVttPX54HgPb-xhkjHIA22pfIlztOJAuai2yV3Ws8aDhZMYhhP_T8kYg48bFv2BMYu43mfFuOGlDSY4ZyxuLHXfdT_X2hnJIvuo7DZA9EkqzEt35qOqEk-2CZ4Q0HiwsIWYOIaRFEUz0B4EdfGQmhZxOka0559hHj5c99akP2pDkrK9ZLv5gyzOdrQ28KfDZBEdVWtA"
+								"access_token":""
 							},
 							"meta": {
 								"hostname": "paylater-dev",
@@ -176,7 +176,7 @@ func TestAmmanaGetCardDetail(t *testing.T) {
 							"data": {
 								"token_type": "Bearer",
 								"expires_in": 3600,
-								"access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJkYTg5OTAxZi00YjJlLTQzOGItYjcwNy1mOTM2NDViMzk2MzEiLCJtZXJjaGFudCI6ImIzYWJkNWI1LWUwMTMtNGNkYS1hNmE4LWQwODU3MGY1NTdmZSIsImV4cCI6MTYwNjEyMzI2MX0.Y4TxmRj0S0hXvEaXS_njqLdPh4XCRbVMOcrM3PnDqEcSlBckHcbhOJZ_9t2NXWNSo4l2VFkbwVoI1SQqCwOqTR8kgrVEmieIEuXcVCjWWAvkU1_-xIJTtv4gbpdxzdekWwJx4X4FaGjrtFJ7iE8gRy18b3BOceXmu-h2QtUgyk_DDNKr4QAqImw4C2b5NB2VwHEzV2DNTCDJpnIrewEYu_WpvyzoG9JQEXLMJgmLlV0jg4MKWs7RClQiHCBG3Jl91k3t0RuCG79okVX4rYuGrhVe5DhGQrMFL91Ud-SqrbBThRRfVDCuYUzwhCf4SFsgzP1f3gTFujYHwoa-UY7yrPVJPapC6VoW1BBft46lMP7nHc8FgTQCrOcldUQRhV9DKpd_BPIddOcGCgrCjmwGgJ63QkWgLArVmDCPUzEaps_r294Por6OpiV4o8eWaBq7aurLwj9E-6TlsOXRaFrRlr4K3iL3GGtoO79KjVttPX54HgPb-xhkjHIA22pfIlztOJAuai2yV3Ws8aDhZMYhhP_T8kYg48bFv2BMYu43mfFuOGlDSY4ZyxuLHXfdT_X2hnJIvuo7DZA9EkqzEt35qOqEk-2CZ4Q0HiwsIWYOIaRFEUz0B4EdfGQmhZxOka0559hHj5c99akP2pDkrK9ZLv5gyzOdrQ28KfDZBEdVWtA"
+								"access_token":""
 							},
 							"meta": {
 								"hostname": "paylater-dev",
@@ -311,7 +311,7 @@ func TestAmmanaGetPaymentDetail(t *testing.T) {
 							"data": {
 								"token_type": "Bearer",
 								"expires_in": 3600,
-								"access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJkYTg5OTAxZi00YjJlLTQzOGItYjcwNy1mOTM2NDViMzk2MzEiLCJtZXJjaGFudCI6ImIzYWJkNWI1LWUwMTMtNGNkYS1hNmE4LWQwODU3MGY1NTdmZSIsImV4cCI6MTYwNjEyMzI2MX0.Y4TxmRj0S0hXvEaXS_njqLdPh4XCRbVMOcrM3PnDqEcSlBckHcbhOJZ_9t2NXWNSo4l2VFkbwVoI1SQqCwOqTR8kgrVEmieIEuXcVCjWWAvkU1_-xIJTtv4gbpdxzdekWwJx4X4FaGjrtFJ7iE8gRy18b3BOceXmu-h2QtUgyk_DDNKr4QAqImw4C2b5NB2VwHEzV2DNTCDJpnIrewEYu_WpvyzoG9JQEXLMJgmLlV0jg4MKWs7RClQiHCBG3Jl91k3t0RuCG79okVX4rYuGrhVe5DhGQrMFL91Ud-SqrbBThRRfVDCuYUzwhCf4SFsgzP1f3gTFujYHwoa-UY7yrPVJPapC6VoW1BBft46lMP7nHc8FgTQCrOcldUQRhV9DKpd_BPIddOcGCgrCjmwGgJ63QkWgLArVmDCPUzEaps_r294Por6OpiV4o8eWaBq7aurLwj9E-6TlsOXRaFrRlr4K3iL3GGtoO79KjVttPX54HgPb-xhkjHIA22pfIlztOJAuai2yV3Ws8aDhZMYhhP_T8kYg48bFv2BMYu43mfFuOGlDSY4ZyxuLHXfdT_X2hnJIvuo7DZA9EkqzEt35qOqEk-2CZ4Q0HiwsIWYOIaRFEUz0B4EdfGQmhZxOka0559hHj5c99akP2pDkrK9ZLv5gyzOdrQ28KfDZBEdVWtA"
+								"access_token":""
 							},
 							"meta": {
 								"hostname": "paylater-dev",
@@ -361,7 +361,7 @@ func TestAmmanaSetVoid(t *testing.T) {
 							"data": {
 								"token_type": "Bearer",
 								"expires_in": 3600,
-								"access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJkYTg5OTAxZi00YjJlLTQzOGItYjcwNy1mOTM2NDViMzk2MzEiLCJtZXJjaGFudCI6ImIzYWJkNWI1LWUwMTMtNGNkYS1hNmE4LWQwODU3MGY1NTdmZSIsImV4cCI6MTYwNjEyMzI2MX0.Y4TxmRj0S0hXvEaXS_njqLdPh4XCRbVMOcrM3PnDqEcSlBckHcbhOJZ_9t2NXWNSo4l2VFkbwVoI1SQqCwOqTR8kgrVEmieIEuXcVCjWWAvkU1_-xIJTtv4gbpdxzdekWwJx4X4FaGjrtFJ7iE8gRy18b3BOceXmu-h2QtUgyk_DDNKr4QAqImw4C2b5NB2VwHEzV2DNTCDJpnIrewEYu_WpvyzoG9JQEXLMJgmLlV0jg4MKWs7RClQiHCBG3Jl91k3t0RuCG79okVX4rYuGrhVe5DhGQrMFL91Ud-SqrbBThRRfVDCuYUzwhCf4SFsgzP1f3gTFujYHwoa-UY7yrPVJPapC6VoW1BBft46lMP7nHc8FgTQCrOcldUQRhV9DKpd_BPIddOcGCgrCjmwGgJ63QkWgLArVmDCPUzEaps_r294Por6OpiV4o8eWaBq7aurLwj9E-6TlsOXRaFrRlr4K3iL3GGtoO79KjVttPX54HgPb-xhkjHIA22pfIlztOJAuai2yV3Ws8aDhZMYhhP_T8kYg48bFv2BMYu43mfFuOGlDSY4ZyxuLHXfdT_X2hnJIvuo7DZA9EkqzEt35qOqEk-2CZ4Q0HiwsIWYOIaRFEUz0B4EdfGQmhZxOka0559hHj5c99akP2pDkrK9ZLv5gyzOdrQ28KfDZBEdVWtA"
+								"access_token":""
 							},
 							"meta": {
 								"hostname": "paylater-dev",
@@ -411,7 +411,7 @@ func TestAmmanaSetSettlement(t *testing.T) {
 							"data": {
 								"token_type": "Bearer",
 								"expires_in": 3600,
-								"access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJkYTg5OTAxZi00YjJlLTQzOGItYjcwNy1mOTM2NDViMzk2MzEiLCJtZXJjaGFudCI6ImIzYWJkNWI1LWUwMTMtNGNkYS1hNmE4LWQwODU3MGY1NTdmZSIsImV4cCI6MTYwNjEyMzI2MX0.Y4TxmRj0S0hXvEaXS_njqLdPh4XCRbVMOcrM3PnDqEcSlBckHcbhOJZ_9t2NXWNSo4l2VFkbwVoI1SQqCwOqTR8kgrVEmieIEuXcVCjWWAvkU1_-xIJTtv4gbpdxzdekWwJx4X4FaGjrtFJ7iE8gRy18b3BOceXmu-h2QtUgyk_DDNKr4QAqImw4C2b5NB2VwHEzV2DNTCDJpnIrewEYu_WpvyzoG9JQEXLMJgmLlV0jg4MKWs7RClQiHCBG3Jl91k3t0RuCG79okVX4rYuGrhVe5DhGQrMFL91Ud-SqrbBThRRfVDCuYUzwhCf4SFsgzP1f3gTFujYHwoa-UY7yrPVJPapC6VoW1BBft46lMP7nHc8FgTQCrOcldUQRhV9DKpd_BPIddOcGCgrCjmwGgJ63QkWgLArVmDCPUzEaps_r294Por6OpiV4o8eWaBq7aurLwj9E-6TlsOXRaFrRlr4K3iL3GGtoO79KjVttPX54HgPb-xhkjHIA22pfIlztOJAuai2yV3Ws8aDhZMYhhP_T8kYg48bFv2BMYu43mfFuOGlDSY4ZyxuLHXfdT_X2hnJIvuo7DZA9EkqzEt35qOqEk-2CZ4Q0HiwsIWYOIaRFEUz0B4EdfGQmhZxOka0559hHj5c99akP2pDkrK9ZLv5gyzOdrQ28KfDZBEdVWtA"
+								"access_token":""
 							},
 							"meta": {
 								"hostname": "paylater-dev",
