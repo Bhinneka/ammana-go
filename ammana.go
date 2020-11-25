@@ -79,14 +79,15 @@ func (a *ammana) GetAuth() (DataAuth GenerateAccessTokenResponse, errs error) {
 	return generateAccessTokenResponse, nil
 }
 
-func (a *ammana) GetCardDetail(request GetCardDetailRequest) ServiceResult {
+func (a *ammana) GetCardDetail(request GetCardDetailRequest) (resp GetCardDetailResponse, err error) {
 	a.info().Println("Starting Get Card Detail Ammana")
+	var getCardDetailResponse GetCardDetailResponse
 
 	// get auth data
 	auth, err := a.GetAuth()
 	if err != nil {
 		a.error().Println(err.Error())
-		return ServiceResult{Error: err}
+		return getCardDetailResponse, err
 	}
 
 	// set header
@@ -104,34 +105,34 @@ func (a *ammana) GetCardDetail(request GetCardDetailRequest) ServiceResult {
 	} else {
 		err = errors.New("invalid query string")
 		a.error().Println(err.Error())
-		return ServiceResult{Error: err}
+		return getCardDetailResponse, err
 	}
 
 	pathGetCardDetail := fmt.Sprintf("clients/%s/card?%s", a.ClientID, queryStringGetCardDetail)
 
-	var getCardDetailResponse GetCardDetailResponse
 	err = a.call("GET", pathGetCardDetail, nil, &getCardDetailResponse, headers)
 	if err != nil {
 		a.error().Println(err.Error())
-		return ServiceResult{Error: err}
+		return getCardDetailResponse, err
 	}
 	if len(getCardDetailResponse.Message) > 0 {
 		err = errors.New(getCardDetailResponse.Message)
 		a.error().Println(err.Error())
-		return ServiceResult{Error: err}
+		return getCardDetailResponse, err
 	}
 
-	return ServiceResult{Result: getCardDetailResponse}
+	return getCardDetailResponse, nil
 }
 
-func (a *ammana) GetOrderURL(request OrderRequest) ServiceResult {
+func (a *ammana) GetOrderURL(request OrderRequest) (resp OrderResponse, err error) {
 	a.info().Println("Starting Get Order URL Ammana")
+	var getOrderURLResponse OrderResponse
 
 	// get auth data
 	auth, err := a.GetAuth()
 	if err != nil {
 		a.error().Println(err.Error())
-		return ServiceResult{Error: err}
+		return getOrderURLResponse, err
 	}
 
 	// set header
@@ -145,32 +146,32 @@ func (a *ammana) GetOrderURL(request OrderRequest) ServiceResult {
 	payload, errPayload := json.Marshal(request)
 	if errPayload != nil {
 		a.error().Println(errPayload.Error())
-		return ServiceResult{Error: errPayload}
+		return getOrderURLResponse, err
 	}
 
-	var getOrderURLResponse OrderResponse
 	err = a.call("POST", pathGetOrderURL, bytes.NewBuffer(payload), &getOrderURLResponse, headers)
 	if err != nil {
 		a.error().Println(err.Error())
-		return ServiceResult{Error: err}
+		return getOrderURLResponse, err
 	}
 	if len(getOrderURLResponse.Message) > 0 {
 		err = errors.New(getOrderURLResponse.Message)
 		a.error().Println(err.Error())
-		return ServiceResult{Error: err}
+		return getOrderURLResponse, err
 	}
 
-	return ServiceResult{Result: getOrderURLResponse}
+	return getOrderURLResponse, nil
 }
 
-func (a *ammana) GetPaymentDetail(invoiceCode string) ServiceResult {
+func (a *ammana) GetPaymentDetail(invoiceCode string) (resp GetPaymentDetailResponse, err error) {
 	a.info().Println("Starting Get Payment Detail Ammana")
+	var getPaymentDetailReponse GetPaymentDetailResponse
 
 	// get auth data
 	auth, err := a.GetAuth()
 	if err != nil {
 		a.error().Println(err.Error())
-		return ServiceResult{Error: err}
+		return getPaymentDetailReponse, err
 	}
 
 	// set header
@@ -181,29 +182,29 @@ func (a *ammana) GetPaymentDetail(invoiceCode string) ServiceResult {
 
 	pathGetPaymentDetail := fmt.Sprintf("clients/%s/orders/%s", a.ClientID, invoiceCode)
 
-	var getPaymentDetailReponse GetPaymentDetailResponse
 	err = a.call("GET", pathGetPaymentDetail, nil, &getPaymentDetailReponse, headers)
 	if err != nil {
 		a.error().Println(err.Error())
-		return ServiceResult{Error: err}
+		return getPaymentDetailReponse, err
 	}
 	if len(getPaymentDetailReponse.Message) > 0 {
 		err = errors.New(getPaymentDetailReponse.Message)
 		a.error().Println(err.Error())
-		return ServiceResult{Error: err}
+		return getPaymentDetailReponse, err
 	}
 
-	return ServiceResult{Result: getPaymentDetailReponse}
+	return getPaymentDetailReponse, nil
 }
 
-func (a *ammana) SetSettleOrder(invoiceCode string) ServiceResult {
+func (a *ammana) SetSettleOrder(invoiceCode string) (resp SetSettlePaymentResponse, err error) {
 	a.info().Println("Starting Set Settle Order Ammana")
+	var setSettleOrderResponse SetSettlePaymentResponse
 
 	// get auth data
 	auth, err := a.GetAuth()
 	if err != nil {
 		a.error().Println(err.Error())
-		return ServiceResult{Error: err}
+		return setSettleOrderResponse, err
 	}
 
 	// set header
@@ -214,30 +215,30 @@ func (a *ammana) SetSettleOrder(invoiceCode string) ServiceResult {
 
 	pathSetSettleOrder := fmt.Sprintf("clients/%s/orders/%s/settle", a.ClientID, invoiceCode)
 
-	var setSettleOrderResponse SetSettlePaymentResponse
 	err = a.call("PATCH", pathSetSettleOrder, nil, &setSettleOrderResponse, headers)
 	if err != nil {
 		a.error().Println(err.Error())
-		return ServiceResult{Error: err}
+		return setSettleOrderResponse, err
 	}
 
 	if len(setSettleOrderResponse.Message) > 0 {
 		err = errors.New(setSettleOrderResponse.Message)
 		a.error().Println(err.Error())
-		return ServiceResult{Error: err}
+		return setSettleOrderResponse, err
 	}
 
-	return ServiceResult{Result: setSettleOrderResponse}
+	return setSettleOrderResponse, nil
 }
 
-func (a *ammana) SetVoidOrder(invoiceCode string) ServiceResult {
+func (a *ammana) SetVoidOrder(invoiceCode string) (resp SetVoidPaymentResponse, err error) {
 	a.info().Println("Starting Set Void Order Ammana")
+	var setVoidOrderReponse SetVoidPaymentResponse
 
 	// get auth data
 	auth, err := a.GetAuth()
 	if err != nil {
 		a.error().Println(err.Error())
-		return ServiceResult{Error: err}
+		return setVoidOrderReponse, err
 	}
 
 	// set header
@@ -248,18 +249,17 @@ func (a *ammana) SetVoidOrder(invoiceCode string) ServiceResult {
 
 	pathSetVoidOrder := fmt.Sprintf("clients/%s/orders/%s", a.ClientID, invoiceCode)
 
-	var setVoidOrderReponse SetVoidPaymentResponse
 	err = a.call("DELETE", pathSetVoidOrder, nil, &setVoidOrderReponse, headers)
 	if err != nil {
 		a.error().Println(err.Error())
-		return ServiceResult{Error: err}
+		return setVoidOrderReponse, err
 	}
 
 	if len(setVoidOrderReponse.Message) > 0 {
 		err = errors.New(setVoidOrderReponse.Message)
 		a.error().Println(err.Error())
-		return ServiceResult{Error: err}
+		return setVoidOrderReponse, err
 	}
 
-	return ServiceResult{Result: setVoidOrderReponse}
+	return setVoidOrderReponse, nil
 }

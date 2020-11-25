@@ -56,32 +56,3 @@ func (c *ammanaHttpClient) exec(method, path string, body io.Reader, v interface
 
 	return nil
 }
-
-// execAsync private function for call http request with async
-func (c *ammanaHttpClient) execAsync(method, path string, body io.Reader, v interface{}, headers map[string]string) <-chan error {
-	output := make(chan error, 1)
-	go func() {
-		req, err := c.newReq(method, path, body, headers)
-
-		if err != nil {
-			output <- err
-			return
-		}
-
-		res, err := c.httpClient.Do(req)
-		defer res.Body.Close()
-
-		if err != nil {
-			output <- err
-			return
-		}
-
-		if v != nil {
-			output <- json.NewDecoder(res.Body).Decode(v)
-			return
-		}
-
-	}()
-	return output
-}
-
