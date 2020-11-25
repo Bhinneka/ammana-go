@@ -8,8 +8,8 @@ import (
 
 const (
 	BaseURL = "https://paylater-dev.ammana.id/api/v1"
-	ClientID = "da89901f-4b2e-438b-b707-f93645b39631"
-	ClientSecret = "3b5b8d854e53662d91a615d7705d61fe"
+	ClientID = "YOUR-CLIENT-ID"
+	ClientSecret = "YOUR-CLIENT-SECRET"
 	DefaultTimeout = 10 * time.Second
 )
 
